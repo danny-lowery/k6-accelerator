@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import getAuthHeader from '../tests/authentication/authentication.js';
 import * as getUsers from '../tests/users/getUsers.js';
+import checkResponseStatus from '../helpers/check-response-status.js';
+import { OK } from '../fixtures/status-codes.js';
 
 export let options = {
   vus: 2,
@@ -27,5 +29,6 @@ export default function (data) {
   // For performance tests, we only want to test the positive scenarios.
   const userId = 1245454545;
 
-  getUsers.testGetUsers(userId);
+  const getUsersResponse = getUsers.getUsers(userId);
+  checkResponseStatus(getUsersResponse, OK);
 }

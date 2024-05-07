@@ -1,6 +1,8 @@
 import * as getUsers from '../tests/users/getUsers.js';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import getAuthHeader from '../tests/authentication/authentication.js';
+import checkResponseStatus from '../helpers/check-response-status.js';
+import { NOT_FOUND } from '../fixtures/status-codes.js';
 
 export let options = {
   vus: 1,
@@ -21,5 +23,6 @@ export let options = {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function (data) {
-  getUsers.testGetUsersNoUserId();
+  const getUsersResponse = getUsers.getUsersNoUserId();
+  checkResponseStatus(getUsersResponse, NOT_FOUND);
 }
