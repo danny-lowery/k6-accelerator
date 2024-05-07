@@ -58,5 +58,6 @@ pids
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# k6 reports
-k6/*.html
+# k6
+src/tests/k6/*.html
+src/tests/k6/k6
