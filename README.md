@@ -24,21 +24,14 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 #### Pre-requisites
 
 - It is assumed that you already have the backend running on port `3000`. If not, execute `npm run api:start`
-- Execute the following npm script `npm run k6:xk6-dashboard:build` (currently Ubuntu, WSL & Mac supported - wont work on Windows!)
+- Execute the following npm script `npm run k6:xk6-dashboard:build` (currently Ubuntu, WSL & Mac supported - won't work on Windows!)
 
 ### Test Execution
-# To run the performance tests
-npm run k6:performance:tests
 
-# To run the negative tests
-npm run k6:negative:tests
-
-# To run the performance tests in debugging mode in order to log the HTTP requests and responses, including the full body.
-npm run k6:performance:tests:http-debugging
-
-# To run the negative tests in debugging mode in order to log the HTTP requests and responses, including the full body.
-npm k6:smoke:tests:http-debugging
-
+- To run the performance tests `npm run k6:performance:tests`
+- To run the negative tests `npm run k6:negative:tests`
+- To run the performance tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:performance:tests:http-debugging`
+- To run the negative tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm k6:smoke:tests:http-debugging`
 
 ### Test Results
 Test results are visible via your terminal after execution, however, specific metrics can be viewed by opening the generated html report, e.g. [k6-test-performance-report.html](./k6/k6-performance-test-report.html) within your browser after executing `npm run k6:performance:tests`.
