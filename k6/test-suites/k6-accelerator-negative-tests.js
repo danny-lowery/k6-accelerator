@@ -1,11 +1,12 @@
-import * as getUsers from "../tests/users/getUsers.js";
-import getAuthHeader from "../tests/authentication/authentication.js";
+import * as getUsers from '../tests/users/getUsers.js';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import getAuthHeader from '../tests/authentication/authentication.js';
 
 export let options = {
-    vus: 1,
-    thresholds: {
-        checks: ['rate>0.99'], // the rate of successful checks should be higher than 99%.
-    },
+  vus: 1,
+  thresholds: {
+    checks: ['rate>0.99'], // the rate of successful checks should be higher than 99%.
+  },
 };
 
 /**
@@ -18,6 +19,7 @@ export let options = {
 //     return {auth_header: getAuthHeader()};
 // }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function (data) {
-    getUsers.testGetUsersNoUserId();
+  getUsers.testGetUsersNoUserId();
 }
