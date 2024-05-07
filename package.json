@@ -12,7 +12,7 @@
     "k6:performance:tests": "cd ./k6 && ./k6 run --out web-dashboard=report=k6-performance-test-report.html ./test-suites/k6-accelerator-performance-tests.js",
     "k6:negative:tests": "cd ./k6 && ./k6 run --out web-dashboard=report=k6-negative-test-report.html ./test-suites/k6-accelerator-negative-tests.js",
     "k6:performance:tests:http-debugging": "cd ./k6 && ./k6 run --out web-dashboard=report=k6-performance-test-report.html --http-debug=\"full\" ./test-suites/k6-accelerator-performance-tests.js",
-    "k6:negative:tests:http-debugging": "cd ./k6 && ./k6 run --out web-dashboard=report=negative-test-report.html --http-debug=\"full\" ./test-suites/k6-accelerator-negative-tests.js",
+    "k6:negative:tests:http-debugging": "cd ./k6 && ./k6 run --out web-dashboard=report=k6-negative-test-report.html --http-debug=\"full\" ./test-suites/k6-accelerator-negative-tests.js",
     "eslint": "eslint .",
     "eslint:fix": "npm run eslint -- --fix"
   },
