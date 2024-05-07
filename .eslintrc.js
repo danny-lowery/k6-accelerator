@@ -28,7 +28,6 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'error',
     // To enforce type definitions
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-    '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/no-inferrable-types': 'off',
     'no-console': 'error',
     // Configure prettier
