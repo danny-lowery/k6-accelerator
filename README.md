@@ -29,6 +29,7 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 ### Test Execution
 
 - To run the performance tests `npm run k6:performance:tests`
+- To run the positive tests `npm run k6:positive:tests`
 - To run the negative tests `npm run k6:negative:tests`
 - To run the performance tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:performance:tests:http-debugging`
 - To run the negative tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:negative:tests:http-debugging`

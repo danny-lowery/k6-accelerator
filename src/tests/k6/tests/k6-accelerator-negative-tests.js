@@ -5,10 +5,10 @@ import checkResponseStatus from '../helpers/check-response-status.js';
 import { NOT_FOUND } from '../fixtures/status-codes.js';
 
 export let options = {
-  vus: 1,
-  thresholds: {
-    checks: ['rate>0.99'], // the rate of successful checks should be higher than 99%.
-  },
+	vus: 1,
+	thresholds: {
+		checks: ['rate>0.99'], // the rate of successful checks should be higher than 99%.
+	},
 };
 
 /**
@@ -21,8 +21,8 @@ export let options = {
 //     return {auth_header: getAuthHeader()};
 // }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/explicit-function-return-type
 export default function (data) {
-  const getUsersResponse = getUsers.getUsersNoUserId();
-  checkResponseStatus(getUsersResponse, NOT_FOUND);
+	const getUsersResponse = getUsers.getUsersNoUserId();
+	checkResponseStatus(getUsersResponse, NOT_FOUND);
 }

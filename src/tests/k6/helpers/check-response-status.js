@@ -8,12 +8,12 @@ import { check } from 'k6';
  * @param expectedResponseStatus - The expected response status code.
  */
 export default function checkResponseStatus(response, expectedResponseStatus) {
-  check(response, {
-    [`Request Method: ${response.request.method}
+	check(response, {
+		[`Request Method: ${response.request.method}
         Request URL: ${response.request.url}
         Actual Response Status: ${response.status}
         Expected Response Status: ${expectedResponseStatus}
         Response Body: ${response.body}`]: (r) =>
-      r.status === expectedResponseStatus,
-  });
+			r.status === expectedResponseStatus,
+	});
 }

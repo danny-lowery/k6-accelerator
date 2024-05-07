@@ -5,10 +5,10 @@ import { ApiTags } from '@nestjs/swagger';
 @Controller('users')
 @ApiTags('users')
 export class UsersController {
-  constructor(private readonly appService: UsersService) {}
+	constructor(private readonly appService: UsersService) {}
 
-  @Get(':id')
-  getUser(@Param('id') userId: number): string {
-    return this.appService.getUser(userId);
-  }
+	@Get(':id')
+	getUser(@Param('id') userId: number): string {
+		return this.appService.getUser(userId);
+	}
 }
