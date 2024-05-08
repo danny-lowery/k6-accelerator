@@ -31,7 +31,8 @@ jobs:
       - name: Run k6 Tests
         run: |
           npm run k6:performance:tests && npm run k6:positive:tests && npm run k6:negative:tests
-      - uses: actions/upload-artifact@v4
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: k6-html-test-reports
