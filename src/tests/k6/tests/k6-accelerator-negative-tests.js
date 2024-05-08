@@ -26,5 +26,5 @@ export let options = {
 export default function (data) {
 	const getUsersResponse = getUsers.getUsersNoUserId();
 	checkResponseStatus(getUsersResponse, NOT_FOUND);
-	checkResponseJson(getUsersResponse, 'message', 'test');
+	checkResponseJson(getUsersResponse, 'message', 'Cannot GET /users/');
 }
