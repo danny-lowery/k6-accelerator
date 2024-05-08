@@ -30,7 +30,7 @@ jobs:
         run: npm run k6:xk6-dashboard:build
       - name: Run k6 Tests
         run: |
-          npm run k6:performance:tests && k6:positive:tests && npm run k6:negative:tests
+          npm run k6:performance:tests && npm run k6:positive:tests && npm run k6:negative:tests
       - uses: actions/upload-artifact@v4
         if: always()
         with:
