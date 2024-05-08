@@ -37,7 +37,7 @@ jobs:
         with:
           name: k6-html-test-reports
           path: |
-            ./src/tests/k6/k6-performance-test-report.html
-            ./src/tests/k6/k6-positive-test-report.html
-            ./src/tests/k6/k6-negative-test-report.html
+            ./src/tests/k6/test-reports/k6-performance-test-report.html
+            ./src/tests/k6/test-reports/k6-positive-test-report.html
+            ./src/tests/k6/test-reports/k6-negative-test-report.html
           retention-days: 3

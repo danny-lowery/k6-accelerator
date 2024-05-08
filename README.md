@@ -35,4 +35,4 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 - To run the negative tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:negative:tests:http-debugging`
 
 ### Test Results
-Test results are visible via your terminal after execution, however, specific metrics can be viewed by opening the generated html report, e.g. [k6-test-performance-report.html](./k6/k6-performance-test-report.html) within your browser after executing `npm run k6:performance:tests`.
+Test results are visible via your terminal after execution, however, specific metrics can be viewed by opening the generated html report, e.g. [k6-test-performance-report.html](./src/tests/k6/test-reports/k6-performance-test-report.html) within your browser after executing `npm run k6:performance:tests`.
