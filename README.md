@@ -24,7 +24,7 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 #### Pre-requisites
 
 - It is assumed that you already have the backend running on port `3000`. If not, execute `npm run api:start`
-- Execute the following npm script `npm run k6:xk6-dashboard:build` (currently Ubuntu, WSL & Mac supported - won't work on Windows!)
+- Execute the following npm script `npm run k6:xk6-dashboard:build` (supports Ubuntu & WSL) / `npm run k6:xk6-dashboard:build:mac` (supports Mac)
 
 ### Test Execution
 
