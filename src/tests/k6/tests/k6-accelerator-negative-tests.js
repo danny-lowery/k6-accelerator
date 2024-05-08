@@ -3,6 +3,7 @@ import * as getUsers from '../services/users/users-service.js';
 import getAuthHeader from '../services/authentication/authentication.js';
 import checkResponseStatus from '../helpers/check-response-status.js';
 import { NOT_FOUND } from '../fixtures/status-codes.js';
+import checkResponseJson from '../helpers/check-response-json.js';
 
 export let options = {
 	vus: 1,
@@ -25,4 +26,5 @@ export let options = {
 export default function (data) {
 	const getUsersResponse = getUsers.getUsersNoUserId();
 	checkResponseStatus(getUsersResponse, NOT_FOUND);
+	checkResponseJson(getUsersResponse, 'message', 'test');
 }

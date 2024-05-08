@@ -24,7 +24,6 @@ module.exports = {
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/require-await': 'error',
-    '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-argument': 'error',
     // To enforce type definitions
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
