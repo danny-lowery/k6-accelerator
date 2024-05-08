@@ -28,7 +28,7 @@ module.exports = {
     // To enforce type definitions
     '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-inferrable-types': 'off',
-    'no-console': 'error',
+    'no-console': 'off',
     // Configure prettier
     'prettier/prettier': [
       'error',
