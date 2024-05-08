@@ -25,7 +25,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Run NestJS API
-        run: npm run api:start
+        run: npm run api:start:verify:api
       - name: Build xk6
         run: npm run k6:xk6-dashboard:build:linux
       - name: Run k6 Tests

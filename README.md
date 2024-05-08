@@ -8,7 +8,7 @@
 
 ### Running the example nest-app
 
-`npm run api:start`
+`npm run api:start:verify:api`
 
 The Nest.js API server is then accessible on port `3000`. The swagger documentation can be viewed by navigating to http://localhost:3000/api.
 
@@ -23,7 +23,7 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 
 #### Pre-requisites
 
-- It is assumed that you already have the backend running on port `3000`. If not, execute `npm run api:start`
+- It is assumed that you already have the backend running on port `3000`. If not, execute `npm run api:start:verify:api`
 - Execute the relevant npm script `npm run k6:xk6-dashboard:build:linux` (Linux & WSL) / `npm run k6:xk6-dashboard:build:mac` (Mac)
 
 ### Test Execution
