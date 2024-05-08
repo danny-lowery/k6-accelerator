@@ -27,7 +27,7 @@ jobs:
       - name: Run NestJS API
         run: npm run api:start
       - name: Build xk6
-        run: npm run k6:xk6-dashboard:build
+        run: npm run k6:xk6-dashboard:build:linux
       - name: Run k6 Tests
         run: |
           npm run k6:performance:tests && npm run k6:positive:tests && npm run k6:negative:tests

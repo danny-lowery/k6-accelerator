@@ -16,7 +16,7 @@
     "api:unit:test:cov": "jest --coverage",
     "api:start": "nest start & ts-node verify-api.ts",
     "api:stop": "npx kill-port 3000",
-    "k6:xk6-dashboard:build": "cd ./src/tests/k6 && docker run --rm -i -u \"$(id -u):$(id -g)\" -v \"${PWD}:/xk6\" grafana/xk6 build",
+    "k6:xk6-dashboard:build:linux": "cd ./src/tests/k6 && docker run --rm -i -u \"$(id -u):$(id -g)\" -v \"${PWD}:/xk6\" grafana/xk6 build",
     "k6:xk6-dashboard:build:mac": "cd ./src/tests/k6 && docker run --rm -it -e GOOS=darwin -u \"$(id -u):$(id -g)\" -v \"${PWD}:/xk6\" grafana/xk6 build",
     "k6:performance:tests": "cd ./src/tests/k6 && ./k6 run --out web-dashboard=report=k6-performance-test-report.html ./tests/k6-accelerator-performance-tests.js",
     "k6:positive:tests": "cd ./src/tests/k6 && ./k6 run --out web-dashboard=report=k6-positive-test-report.html ./tests/k6-accelerator-positive-tests.js",
