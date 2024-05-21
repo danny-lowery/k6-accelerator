@@ -1,4 +1,4 @@
-import { check, fail } from 'k6';
+import { expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 
 /**
  * Function to check the response status of an API request.
@@ -8,15 +8,8 @@ import { check, fail } from 'k6';
  * @param expectedResponseStatus - The expected response status code.
  */
 export default function checkResponseStatus(response, expectedResponseStatus) {
-	if (
-		!check(response, {
-			['Checking Response Status.']: (r) => r.status === expectedResponseStatus,
-		})
-	) {
-		fail(`Request Method: ${response.request.method}
-        Request URL: ${response.request.url}
-        Actual Response Status: ${response.status}
-        Expected Response Status: ${expectedResponseStatus}
-        Response Body: ${response.body}`);
-	}
+	expect(
+		response.status,
+		`${response.request.method} ${response.request.url} endpoint response status with value ${response.status}`
+	).to.equal(expectedResponseStatus);
 }

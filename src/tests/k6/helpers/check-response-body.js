@@ -1,4 +1,4 @@
-import { check, fail } from 'k6';
+import { expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 
 /**
  * Function to check the response body of an API request.
@@ -8,12 +8,8 @@ import { check, fail } from 'k6';
  * @param expectedBody - The expected response body.
  */
 export default function checkResponseBody(response, expectedBody) {
-	if (
-		!check(response, {
-			['Checking Response Body.']: (r) => r.body === expectedBody,
-		})
-	) {
-		fail(`Actual Response Body: ${response.body}
-		      Expected Response Body: ${expectedBody}`);
-	}
+	expect(
+		response.body,
+		`${response.request.method} ${response.request.url} endpoint response body with value ${response.body}`
+	).to.equal(expectedBody);
 }

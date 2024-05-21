@@ -18,6 +18,7 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 - [k6](https://k6.io/docs/)
 - [xk6](https://github.com/grafana/xk6)
 - [xk6 dashboard](https://github.com/grafana/xk6-dashboard)
+- [k6chaijs](https://k6.io/docs/javascript-api/jslib/k6chaijs/)
 
 ### Running the k6 Tests
 
@@ -32,6 +33,7 @@ The Nest.js API server is then accessible on port `3000`. The swagger documentat
 - To run the positive tests `npm run k6:positive:tests`
 - To run the negative tests `npm run k6:negative:tests`
 - To run the performance tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:performance:tests:http-debugging`
+- To run the positive tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:positive:tests:http-debugging`
 - To run the negative tests in debugging mode in order to log the HTTP requests and responses, including the full body `npm run k6:negative:tests:http-debugging`
 
 ### Test Results
