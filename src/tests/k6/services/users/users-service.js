@@ -4,12 +4,12 @@ import http from 'k6/http';
 /**
  * Send a GET request to the users' endpoint.
  */
-export function getUsers(userId) {
+export async function getUsers(userId) {
 	const requestUrl = `${BASE_URL}/users/${userId}`;
-	return http.get(requestUrl);
+	return await http.asyncRequest('GET', requestUrl);
 }
 
-export function getUsersNoUserId() {
+export async function getUsersNoUserId() {
 	const requestUrl = `${BASE_URL}/users/`;
-	return http.get(requestUrl);
+	return await http.asyncRequest('GET', requestUrl);
 }

@@ -5,8 +5,9 @@ import checkResponseStatus from '../helpers/check-response-status.js';
 import { OK } from '../fixtures/status-codes.js';
 
 export let options = {
-	vus: 2,
-	iterations: 2,
+	vus: 10,
+	iterations: 100,
+	duration: 6000,
 	thresholds: {
 		http_req_failed: ['rate<0.01'], // http errors should be less than 1%.
 		http_req_duration: ['p(99)<3000'], // 99% of requests should be below 3000ms.
@@ -21,14 +22,14 @@ export let options = {
  * @returns {{auth_header: ({headers: {Authorization: string, "Content-Type": string}}|*)}}
  */
 // export function setup() {
-//     return {auth_header: getAuthHeader()};
+// 	return { auth_header: getAuthHeader() };
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/explicit-function-return-type
-export default function (data) {
+export default async function (data) {
 	// For performance tests, we only want to test the positive scenarios.
 	const userId = 1245454545;
 
-	const getUsersResponse = getUsers.getUsers(userId);
+	const getUsersResponse = await getUsers.getUsers(userId);
 	checkResponseStatus(getUsersResponse, OK);
 }

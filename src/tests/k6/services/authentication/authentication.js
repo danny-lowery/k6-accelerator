@@ -7,7 +7,7 @@ import { OK } from '../../fixtures/status-codes.js';
  *
  * @returns {{headers: {Authorization: string, "Content-Type": string}}} Authentication header including the access token
  */
-export default function getAuthHeader() {
+export default async function getAuthHeader() {
 	const requestUrl = 'requestUrl';
 	const requestBody = 'requestBody';
 	const requestParams = {
@@ -15,7 +15,12 @@ export default function getAuthHeader() {
 			'Content-Type': 'application/json',
 		},
 	};
-	const response = http.post(requestUrl, requestBody, requestParams);
+	const response = await http.asyncRequest(
+		'POST',
+		requestUrl,
+		requestBody,
+		requestParams
+	);
 
 	checkResponseStatus(response, OK);
 

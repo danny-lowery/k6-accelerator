@@ -19,12 +19,12 @@ export let options = {
  * @returns {{auth_header: ({headers: {Authorization: string, "Content-Type": string}}|*)}}
  */
 // export function setup() {
-//     return {auth_header: getAuthHeader()};
+// 	return { auth_header: getAuthHeader() };
 // }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/explicit-function-return-type
-export default function (data) {
-	const getUsersResponse = getUsers.getUsersNoUserId();
+export default async function (data) {
+	const getUsersResponse = await getUsers.getUsersNoUserId();
 	checkResponseStatus(getUsersResponse, NOT_FOUND);
 	checkResponseJson(getUsersResponse, 'message', 'Cannot GET /users/');
 }
