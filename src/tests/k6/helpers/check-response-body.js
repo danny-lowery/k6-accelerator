@@ -1,4 +1,4 @@
-import { check } from 'k6';
+import { check, fail } from 'k6';
 
 /**
  * Function to check the response body of an API request.
@@ -8,9 +8,12 @@ import { check } from 'k6';
  * @param expectedBody - The expected response body.
  */
 export default function checkResponseBody(response, expectedBody) {
-	check(response, {
-		[`Actual Response Body: ${response.body}
-        Expected Response Body: ${expectedBody}
-        `]: (r) => r.body === expectedBody,
-	});
+	if (
+		!check(response, {
+			['Checking Response Body.']: (r) => r.body === expectedBody,
+		})
+	) {
+		fail(`Actual Response Body: ${response.body}
+		      Expected Response Body: ${expectedBody}`);
+	}
 }
