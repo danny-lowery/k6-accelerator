@@ -7,7 +7,7 @@ import chai, { describe } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 
 export let options = {
 	vus: 1000,
-	iterations: 5000,
+	iterations: 250000,
 	thresholds: {
 		http_req_failed: ['rate<0.01'], // http errors should be less than 1%.
 		http_req_duration: ['p(99)<3000'], // 99% of requests should be below 3000ms.
